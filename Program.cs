@@ -161,13 +161,28 @@ namespace GNet_C_4
         //---------------------//
 
         //Q11:Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
-        static void PrintBookInfo(string title, int pages = 300)
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"Title: {title}, Pages: {pages}");
+        //}
+        //static void Main(string[] args)
+        //{
+        //    PrintBookInfo(pages: 350, title: "The Pragmatic Programmer");
+        //}
+
+        //---------------------//
+
+        //Q12:Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. Call it with three book titles.
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine($"Title: {title}, Pages: {pages}");
+            foreach (var title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
         static void Main(string[] args)
         {
-            PrintBookInfo(pages: 350, title: "The Pragmatic Programmer");
+            PrintAllTitles("Clean Code", "The Pragmatic Programmer", "Design Patterns");
         }
     }
 
