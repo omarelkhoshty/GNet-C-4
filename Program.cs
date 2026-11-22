@@ -54,16 +54,30 @@ namespace GNet_C_4
 
         //Q05:Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and print pages afterward.What do you expect to see, and why?
 
-        static void AddBonusPages(int pages)
+        //static void AddBonusPages(int pages)
+        //{
+        //    pages += 50;
+        //}
+        //static void Main(string[] args)
+        //{
+        //    int pages = 400;
+        //    AddBonusPages(pages);
+        //    Console.WriteLine(pages);
+        //}
+
+        //---------------------//
+
+        //Q06: Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to see, and why?
+
+        static void ApplyDiscount(double[] prices)
         {
-            pages += 50;
+            prices[0] -= 5;
         }
         static void Main(string[] args)
         {
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
         }
     }
-
 }
