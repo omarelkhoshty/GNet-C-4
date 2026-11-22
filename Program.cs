@@ -69,15 +69,33 @@ namespace GNet_C_4
 
         //Q06: Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to see, and why?
 
-        static void ApplyDiscount(double[] prices)
+        //static void ApplyDiscount(double[] prices)
+        //{
+        //    prices[0] -= 5;
+        //}
+        //static void Main(string[] args)
+        //{
+        //    double[] prices = { 25.5, 40.0 };
+        //    ApplyDiscount(prices);
+        //    Console.WriteLine(prices[0]);
+        //}
+
+        //---------------------//
+
+        //Q07: Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward.How is the result different from question 5?
+
+        static void AddBonusPagesByRef(ref int pages)
         {
-            prices[0] -= 5;
+            pages += 50;
         }
         static void Main(string[] args)
         {
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);
+            int pages = 400;
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages);
+            // The result is different from question 5 because using ref allows the method to modify the original variable, so pages will be updated to 450.
         }
+
     }
+
 }
