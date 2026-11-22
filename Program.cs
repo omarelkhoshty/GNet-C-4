@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Reflection;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GNet_C_4
@@ -146,14 +147,27 @@ namespace GNet_C_4
         //---------------------//
 
         //Q10:Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call it once with only a title, and once passing both a title and pages.
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"Title: {title}, Pages: {pages}");
+        //}
+        //static void Main(string[] args)
+        //{
+        //    PrintBookInfo("Clean Code");
+        //    PrintBookInfo("The Pragmatic Programmer", 350);
+        //}
+
+
+        //---------------------//
+
+        //Q11:Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
         static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"Title: {title}, Pages: {pages}");
         }
         static void Main(string[] args)
         {
-            PrintBookInfo("Clean Code");
-            PrintBookInfo("The Pragmatic Programmer", 350);
+            PrintBookInfo(pages: 350, title: "The Pragmatic Programmer");
         }
     }
 
