@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GNet_C_4
 {
@@ -84,18 +85,32 @@ namespace GNet_C_4
 
         //Q07: Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward.How is the result different from question 5?
 
-        static void AddBonusPagesByRef(ref int pages)
+        //static void AddBonusPagesByRef(ref int pages)
+        //{
+        //    pages += 50;
+        //}
+        //static void Main(string[] args)
+        //{
+        //    int pages = 400;
+        //    AddBonusPagesByRef(ref pages);
+        //    Console.WriteLine(pages);
+        //    // The result is different from question 5 because using ref allows the method to modify the original variable, so pages will be updated to 450.
+        //}
+
+        //---------------------//
+
+        //Q08:Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length afterward.
+        static void ReplaceArray(ref double[] prices)
         {
-            pages += 50;
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
         static void Main(string[] args)
         {
-            int pages = 400;
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages);
-            // The result is different from question 5 because using ref allows the method to modify the original variable, so pages will be updated to 450.
-        }
+            double[] prices = { 25.5, 40.0, 33.75 };
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
 
+        }
     }
 
 }
