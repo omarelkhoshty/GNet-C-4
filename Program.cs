@@ -28,15 +28,27 @@ namespace GNet_C_4
 
         ////Q03:Write a method called PrintWelcomeMessage that takes no parameters and prints "Welcome to the Library!". Call it from Main.
 
-        static void PrintWelcomeMessage()
+        //static void PrintWelcomeMessage()
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+        //static void Main(string[] args)
+        //{
+        //    PrintWelcomeMessage();
+        //}
+
+        //---------------------//
+
+        //Q04:Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with "Clean Code". 
+
+        static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Welcome to the Library!");
+            Console.WriteLine("Book title: " + title);
         }
         static void Main(string[] args)
         {
-            PrintWelcomeMessage();
+            PrintBookTitle("Clean Code");
         }
-
 
     }
 
